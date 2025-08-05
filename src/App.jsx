@@ -392,15 +392,13 @@ function App() {
     <>
       {/* 悬浮顶部搜索栏 */}
       <div
+        className="searchbar-float"
         style={{
           position: "fixed",
           top: 0,
           left: 0,
           width: "100%",
-          background: "rgba(255,255,255,0.97)",
           zIndex: 100,
-          boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
-          padding: "12px 0 8px 0",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

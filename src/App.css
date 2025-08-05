@@ -154,6 +154,22 @@ body {
     max-width: 100vw;
     padding: 0.5rem;
   }
+  .searchbar-float {
+    box-sizing: border-box;
+    width: 100vw !important;
+    left: 0 !important;
+    border-radius: 0 0 18px 18px !important;
+    /* 防止横向溢出 */
+    overflow-x: hidden;
+  }
+  .searchbar-float > div {
+    max-width: 98vw;
+    margin: 0 auto;
+  }
+  .search-input {
+    width: 100%;
+    box-sizing: border-box;
+  }
   .container {
     gap: 12px;
     padding: 0 2px;
@@ -200,6 +216,9 @@ body {
     font-size: 15px;
     max-height: 160px !important;
   }
+  .searchbar-float {
+    padding: 8px 0 6px 0 !important;
+  }
 }
 
 .card {
@@ -208,4 +227,81 @@ body {
 
 .read-the-docs {
   color: #888;
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #181a1b;
+    color: #e3e6eb;
+  }
+  #root {
+    background: #181a1b;
+    color: #e3e6eb;
+  }
+  .searchbar-float {
+    background: rgba(32, 34, 37, 0.97) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.32) !important;
+  }
+  .container {
+    background: transparent;
+  }
+  .univ-card {
+    background: #23272a;
+    color: #e3e6eb;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.32);
+  }
+  .univ-card h2 {
+    color: #e3e6eb;
+  }
+  .hot-card {
+    background: #23272a;
+    color: #e3e6eb;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.32);
+  }
+  .hot-card:hover,
+  .hot-card:focus {
+    background: #2c3136;
+  }
+  .hot-card.open {
+    background: #22262b;
+  }
+  .hot-header {
+    background: transparent;
+  }
+  .hot-title {
+    color: #e3e6eb;
+  }
+  .hot-time {
+    color: #b0b8c1;
+  }
+  .hot-detail {
+    color: #d2d6db;
+  }
+  .impact-badge {
+    background: #444a51;
+    color: #fff;
+  }
+  .impact-严重 {
+    background: #e74c3c;
+    color: #fff;
+  }
+  .impact-中 {
+    background: #f7b500;
+    color: #222;
+  }
+  .impact-轻 {
+    background: #27ae60;
+    color: #fff;
+  }
+  .search-input {
+    background: #23272a;
+    color: #e3e6eb;
+    border: 1px solid #444a51;
+  }
+  .search-result-list {
+    background: #23272a;
+    color: #e3e6eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.32);
+  }
 }
